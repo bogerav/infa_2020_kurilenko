@@ -52,6 +52,17 @@ def draw_paluba(boat_0_x, boat_0_y, proportion):
 	polygon(screen, (139, 80, 20), [(boat_0_x + proportion * 28 + 2, boat_0_y), (boat_0_x + proportion * 28 + 2, boat_0_y + proportion * 7 - 1), (boat_0_x + proportion * 43, boat_0_y)])
 	circle(screen, (0, 0, 0), (boat_0_x + proportion * 33, boat_0_y + proportion * 3 - 2), proportion * 2)
 	circle(screen, (255, 255, 255), (boat_0_x + proportion * 33, boat_0_y + proportion * 3 - 2), proportion * 2 - 3)
+
+def draw_parus(parus_x, parus_y, proportion):
+	rect(screen, (0, 0, 0), (parus_x, parus_y, proportion * 2 - 2,  2 * 10 * proportion))
+	polygon(screen, (218, 173, 128), [(parus_x + proportion * 2 - 2, parus_y), (parus_x + proportion * 6, parus_y + proportion * 10), (parus_x + proportion * 14, parus_y + proportion * 10)])
+	polygon(screen, (218, 173, 128), [(parus_x + proportion * 2 - 2,parus_y + proportion * 10 * 2), (parus_x + proportion * 6, parus_y + proportion * 10), (parus_x + proportion * 14, parus_y + proportion * 10)])
+	aaline(screen, (0, 0, 0), (parus_x + proportion * 6, parus_y + proportion *10), (parus_x + proportion * 14, parus_y + proportion * 10))
+	aaline(screen, (0, 0, 0), (parus_x + proportion * 6, parus_y + proportion *10), (parus_x + proportion * 2 - 2, parus_y))
+	aaline(screen, (0, 0, 0), (parus_x + proportion * 14, parus_y + proportion *10), (parus_x + proportion * 2 - 2, parus_y))
+	aaline(screen, (0, 0, 0), (parus_x + proportion * 6, parus_y + proportion *10), (parus_x + proportion * 2 - 2, parus_y + 2 * 10 * proportion))
+	aaline(screen, (0, 0, 0), (parus_x + proportion * 14, parus_y + proportion *10), (parus_x + proportion * 2 - 2, parus_y + 2 * 10 * proportion))
+
 	
 def draw_sin (w_start, w_stop, w_color, y_wave, h_wave):
 	d_wave = (w_stop - w_start)/90
@@ -79,6 +90,8 @@ draw_paluba(360, 190, 5)
 draw_paluba(185, 170, 3)
 rect(screen, (0, 0, 255), (0, 0, 600, 170))
 rect(screen, (129, 218, 247), (0, 0, 600, 160))
+draw_parus(415, 90, 5)
+draw_parus(225, 110, 3)
 circle(screen, (255, 255, 0), (540, 60), R) #Sun
 multicloud(170, 40, 15, 5)
 multicloud(306, 30, 25, 8)

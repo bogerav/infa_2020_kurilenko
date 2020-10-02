@@ -7,12 +7,12 @@ pygame.init()
 FPS = 30
 screen = pygame.display.set_mode((800, 1100))
 
-rect(screen, (119, 186, 208), (0, 0, 800, 1100))
+rect(screen, (119, 186, 208), (0, 0, 800, 1100)) #устанавливаем фон: небо и траву 
 rect(screen, (102, 197, 121), (0, 300, 800, 900))
-size = width, height = (260, 200)
-dog_surface = pygame.Surface(size)
-size = width, height = (800, 400)
-fence_surface = pygame.Surface(size)
+size = width, height = (260, 200) #устанавливаем размер поверхности для собаки
+dog_surface = pygame.Surface(size) #устанаыливаем саму поверхность для собаки
+size = width, height = (800, 400) #устанавливаем размер поврехности для забора
+fence_surface = pygame.Surface(size) #устанавливаем саму поверхность для забора
 sobaken_color = (107, 103, 85)
 black_color = (0, 0, 0)
 white_color = (255, 255, 255)
